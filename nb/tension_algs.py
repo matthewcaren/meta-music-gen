@@ -38,7 +38,7 @@ def simple_lerdahl(pitch_classes, tonic_class):
     }
 
     total_tension = 0.0
-    for pitch in pitch_classes:
+    for pitch in set(pitch_classes):
         distance = (pitch - tonic_class) % 12
         total_tension += tension_values[distance]
 
